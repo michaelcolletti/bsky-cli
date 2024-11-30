@@ -1,0 +1,11 @@
+[package]
+name = "bluesky-cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.0", features = ["derive"] }
+secstr = "0.3"
+dotenv = "0.15"
+anyhow = "1.0"
+tokio = { version = "1", features = ["full"] }

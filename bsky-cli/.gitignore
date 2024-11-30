@@ -1,0 +1,28 @@
+# Rust specific
+target/
+**/*.rs.bk
+
+# Dependencies
+/Cargo.lock
+
+# Build artifacts
+/target/
+
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Generated files
+*.log
+*.tmp
+
+# Environment variables
+.env
+
+# Security considerations
+secrets/
+*.key
+*.pem
+*.crt
