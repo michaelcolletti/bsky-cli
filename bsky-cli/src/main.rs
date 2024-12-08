@@ -57,12 +57,12 @@ impl BlueSkyClient {
         })
     }
 
-    pub async fn post_message(&self, message: &str, visibility: Option<String>) -> Result<()> {
+    pub async fn post_message(&self, _message: &str, _visibility: Option<String>) -> Result<()> {
         // Implement BlueSky post logic
         Ok(())
     }
 
-    pub async fn read_posts(&self, limit: u32, time_range: Option<String>) -> Result<()> {
+    pub async fn read_posts(&self, _limit: u32, _time_range: Option<String>) -> Result<()> {
         // Implement BlueSky read posts logic
         Ok(())
     }
@@ -87,7 +87,7 @@ async fn main() -> Result<()> {
         }
         Commands::ListUsers { limit, filter } => {
             let users = read_users_from_file("users.txt")?;
-            let filtered_users = filter_users(users, filter.clone(), *limit as usize);
+            let filtered_users = filter_users(users?, filter.clone(), *limit as usize);
             for user in filtered_users {
                 println!("{}", user);
             }
